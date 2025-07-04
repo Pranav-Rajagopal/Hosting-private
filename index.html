@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Pranav</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #0d0d0d;
-      color: #eee;
-      font-family: 'Roboto', sans-serif;
+      background: url('https://images.unsplash.com/photo-1607082349566-187342175e2d?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #39ff14;
+      font-family: 'Roboto Mono', monospace;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -25,11 +25,11 @@
       max-width: 900px;
       padding: 40px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(57, 255, 20, 0.2);
       border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
+      box-shadow: 0 0 30px rgba(57, 255, 20, 0.2);
+      backdrop-filter: blur(10px);
       animation: fadeIn 2s ease;
     }
 
@@ -38,11 +38,11 @@
       font-size: 1.3rem;
       line-height: 1.8;
       text-align: left;
-      white-space: pre-wrap;
+      white-space: nowrap;
       overflow: hidden;
-      border-right: 2px solid #00f2ff;
-      width: 0;
-      animation: typing 12s steps(100, end) forwards, blink 0.7s step-end infinite;
+      border-right: 2px solid #39ff14;
+      width: 100%;
+      animation: typing 14s steps(150, end) 1s forwards, blink 0.7s step-end infinite;
     }
 
     @keyframes typing {
@@ -57,6 +57,15 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: #39ff14;
+      text-align: right;
+      opacity: 0;
+      animation: fadeIn 3s ease 15s forwards;
     }
   </style>
 </head>
@@ -74,6 +83,7 @@
 Every day feels the same now. Wake up, school, come home, study, sleep — repeat. It’s like life got stuck in one gear and forgot how to move forward. The syllabus is too much, the pressure is silent but loud in my head. Sometimes I stare at a textbook and nothing goes in — not because I don’t care, but because I’m exhausted. I don’t even know if I’m doing okay or just getting by. People expect so much, but they don’t see the version of me that's always tired but still shows up. I’m not trying to prove anything to the world. I just want to keep going without losing myself. I don’t have it all figured out — but I’ll move, one step at a time. Quietly, slowly, steadily. From zero, I’ll grow. And one day, I’ll look back and see how far I’ve come.
       </p>
     </div>
+    <div class="signature">— Pranav Rajagopal</div>
   </div>
 </body>
 
