@@ -5,31 +5,8 @@ body {
   padding: 0;
   font-family: 'Orbitron', sans-serif;
   color: #aeefff;
-  background: linear-gradient(to bottom, #000010 0%, #000022 100%);
+  background: radial-gradient(ellipse at bottom, #00111a 0%, #000000 100%);
   overflow: hidden;
-}
-
-/* Animated Stars using box-shadows instead of an image */
-.stars {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background: transparent;
-  box-shadow:
-    1000px 200px #00f0ff,
-    500px 300px #aeefff,
-    1500px 600px #00ccff,
-    1200px 400px #66f2ff,
-    800px 100px #00b3ff,
-    300px 700px #66d9ff,
-    600px 900px #00faff;
-  animation: moveStars 50s linear infinite;
-  z-index: -1;
-}
-
-@keyframes moveStars {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-1000px); }
 }
 
 .container {
@@ -39,21 +16,44 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   max-width: 700px;
+  z-index: 1;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
-  color: #7defff;
-  text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff, 0 0 30px #00f0ff;
 }
 
 .desc {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Roboto Mono', monospace;
-  line-height: 1.6;
+  line-height: 1.7;
   background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
+  padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 238, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
+}
+
+/* PURE CSS Stars */
+.stars::before,
+.stars::after {
+  content: "";
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 3000px;
+  height: 3000px;
+  background-image: radial-gradient(2px 2px at 20% 20%, #00eaff 70%, transparent 100%),
+                    radial-gradient(2px 2px at 80% 30%, #66f7ff 70%, transparent 100%),
+                    radial-gradient(2px 2px at 50% 70%, #009dff 70%, transparent 100%),
+                    radial-gradient(1px 1px at 60% 10%, #ffffff 70%, transparent 100%);
+  animation: twinkle 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-500px, -500px); }
 }
